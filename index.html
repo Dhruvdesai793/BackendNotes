@@ -4,126 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backend Quantum Mastery Notes</title>
-    <!-- Tailwind CSS CDN for quick styling -->
+    <!-- Tailwind CSS CDN - Load this FIRST -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for the Inter font and basic overrides */
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background-color: #f3f4f6; /* Light gray background */
-        }
-        /* Styling for code blocks within the notes */
-        pre {
-            background-color: #1f2937; /* Darker gray for code background */
-            color: #e5e7eb; /* Light text color for code */
-            padding: 1rem;
-            border-radius: 0.5rem; /* Rounded corners for code blocks */
-            overflow-x: auto; /* Enable horizontal scrolling for long lines */
-            font-family: 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
-            font-size: 0.875rem; /* Smaller font size for code */
-            line-height: 1.5;
-            margin-top: 0.75rem;
-            margin-bottom: 0.75rem;
-        }
-        /* Specific styling for the perfect ASCII diagrams */
-        pre.ascii-diagram {
-            background-color: #111827; /* Even darker for diagrams */
-            color: #f9fafb; /* Lighter text for diagrams */
-            border: 1px solid #374151;
-            padding: 1.25rem;
-            font-size: 0.8rem;
-            line-height: 1.25; /* Tighter line height for dense diagrams */
-            white-space: pre; /* Ensure pre-formatted text is preserved */
-        }
-        /* Styling for details/summary elements for collapsible sections */
-        details {
-            margin-bottom: 1rem;
-            background-color: #ffffff;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Ensures rounded corners apply to content */
-        }
-        details summary {
-            padding: 1.25rem 1.5rem;
-            font-weight: 700;
-            cursor: pointer;
-            outline: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #e0e7ff; /* Light blue for summary */
-            color: #3b82f6; /* Blue text for summary */
-            border-bottom: 1px solid #c7d2fe;
-            border-radius: 0.75rem 0.75rem 0 0; /* Top rounded corners */
-            transition: background-color 0.2s ease-in-out;
-        }
-        details summary:hover {
-            background-color: #c7d2fe;
-        }
-        details[open] summary {
-            border-bottom: 1px solid #a5b4fc;
-            background-color: #a5b4fc; /* Darker blue when open */
-            color: #1e3a8a; /* Darker blue text when open */
-            border-radius: 0.75rem 0.75rem 0 0;
-        }
-        details summary::-webkit-details-marker {
-            display: none; /* Hide default marker */
-        }
-        details summary::after {
-            content: '+'; /* Custom expand icon */
-            font-size: 1.5rem;
-            line-height: 1;
-            transition: transform 0.2s ease-in-out;
-        }
-        details[open] summary::after {
-            content: '-'; /* Custom collapse icon */
-            transform: rotate(0deg); /* No rotation for minus sign */
-        }
-        .details-content {
-            padding: 1.25rem 1.5rem;
-            border-top: 1px solid #e5e7eb;
-            background-color: #ffffff;
-            border-radius: 0 0 0.75rem 0.75rem; /* Bottom rounded corners */
-        }
-        .details-content h3 {
-            font-size: 1.5rem; /* Day headings */
-            font-weight: 700;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: #1f2937;
-        }
-        .details-content h4 {
-            font-size: 1.25rem; /* Sub-headings within days */
-            font-weight: 600;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-            color: #374151;
-        }
-        .details-content p {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-            color: #4b5563;
-        }
-        .details-content ul {
-            list-style-type: disc;
-            margin-left: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #4b5563;
-        }
-        .details-content ul li {
-            margin-bottom: 0.25rem;
-        }
-        .details-content b {
-            font-weight: 700;
-            color: #1f2937;
-        }
-        .details-content .emoji {
-            font-size: 1.2em; /* Larger emojis */
-            vertical-align: middle;
-        }
-    </style>
+    <!-- Custom styles - Load this SECOND, to override/augment Tailwind -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="p-4 sm:p-8 bg-gray-100 min-h-screen">
     <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 sm:p-10 border border-gray-200">
@@ -140,6 +24,8 @@
         </div>
     </div>
 
+    <!-- Script to load notes content - Load this LAST, after DOM is ready -->
     <script src="script.js"></script>
 </body>
 </html>
+
